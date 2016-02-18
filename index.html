@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Shadowfax</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--  Promotion starts -->
+    <section id="promotion">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6"></div>
+          <div class="col-sm-5">
+            <span class="promotion-inner">Ride with us and earn upto 
+              <i class="fa fa-rupee"></i>
+              <span>20,000</span> a month.
+              <a href="" class="btn btn-default">Become a Rider</a>
+            </span>
+          </div>
+          <div class="col-sm-1 text-right">
+            <i class="fa fa-times"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  Promotion ends -->
+    <!--  nav starts -->
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <a href="">
+              <img src="img/logo.png" alt="">
+            </a>
+          </div>
+          <div class="col-sm-6 text-right">
+            <i class="menu-text">MENU</i>
+            <i class="fa fa-bars fa-2x"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--  nav ends -->
+    <!--  banner starts -->
+    <section id="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="banner-inner">
+            <div class="border"></div>
+            <h1>The future<br /> of local delivery is here.</h1>
+            <p>Creating India’s largest on-demand delivery infrastructure </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  banner ends -->
+     <!--  About starts -->
+    <section id="about">
+      <div class="container"> 
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <h2>About Us</h2>
+              <p> 
+                Shadowfax is India's largest logistics provider for local businesses.
+                We focus on serving the first and last mile delivery needs of our clients across 6 cities in India.
+                <br><br>
+                Innovation is a way of life for us. And our R&D Centre in Bangalore is setting a
+                new benchmark in innovation and operational excellence. Our proprietary technology
+                ensures that between pick up and delivery, your business stays miles ahead.
+                <br><br>
+                When you partner with us, you never have to worry. We deliver. Always. 
+              </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="app-section">
+      
+    </section>
+    <div class="overlay overlay-hide">
+      <div class="close"><i class="fa fa-times"></i></div>
+      <ul class="overlay-list text-center">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Sevices</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(window).on("scroll",function() {
+        var y = $(this).scrollTop();
+        var z = $('#about').offset().top;
+        if (y >= z) {
+        $(".navbar").addClass("cbp-af-header-shrink  navbar-fixed-top");
+        $(".navbar img").attr("src","img/logo_white.png");
+        } else {
+            $(".navbar").removeClass("cbp-af-header-shrink  navbar-fixed-top");
+            $(".navbar img").attr("src","img/logo.png");
+        }
+      });
+      $(".fa.fa-bars").on("click",function(){
+        $(".close").show().siblings().show();
+        $(this).parents(".navbar").siblings(".overlay").addClass("overlay-open").removeClass("overlay-hide");
+        
+      });
+      $(".overlay>.close").on("click",function(){
+        $(this).hide().siblings(".overlay-list").hide().parent().addClass("overlay-hide").removeClass("overlay-open");
+      });
+    </script>
+  </body>
+</html>
